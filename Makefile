@@ -7,4 +7,4 @@ dev:
 	docker-compose up
 
 exec-backend:
-	docker-compose exec mg-backend bash
+	docker exec -it mg-backend bash
