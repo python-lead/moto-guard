@@ -28,6 +28,7 @@ that I've learned from working on different Django projects
 #### Project backend service:
 * Python: 3.11.7
 * Django: ~4.2
+* Django REST framework: ~3.14
 
 ## Requirements:
 * Docker: ^24.0.2

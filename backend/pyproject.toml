@@ -10,6 +10,7 @@ python = "^3.11"
 django = "~4.2"
 black = "^23.12.0"
 psycopg2 = "^2.9.9"
+djangorestframework = "~3.14"
 
 
 [build-system]
