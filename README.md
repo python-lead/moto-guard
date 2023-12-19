@@ -5,7 +5,7 @@
   <br>
 </h1>
 
-<h4 align="center">Django based motorcycle service tracker</h4>
+<h4 align="center">Django REST framework based motorcycle service tracker</h4>
 <h5 align="center">"Set reminders and stay ahead of maintenance schedules. A rider's companion for a smoother, worry-free journey on two wheels"</h5>
 <h6 align="center"> - GPT-3.5</h6>
 
@@ -19,6 +19,11 @@
 ## General info
 This project is a sandbox for me to play with a small API based app while also testing and utilising good practices 
 that I've learned from working on different Django projects
+
+## API URLs documentation
+- [Schema yaml download](http://localhost:8001/api/schema/)
+- [API swagger-ui](http://localhost:8001/api/schema/swagger-ui/)
+- [API redoc](http://localhost:8001/api/schema/redoc/)
 
 ## Technologies
 #### Project environment:
