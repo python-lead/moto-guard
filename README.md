@@ -26,7 +26,7 @@ that I've learned from working on different Django projects
 * docker-compose: 1.29.2
 
 #### Project backend service:
-* Python: 3.12.2
+* Python: 3.11.7
 * Django: ~4.2
 
 ## Requirements:
