@@ -6,10 +6,36 @@ authors = ["Dawid <rygula.dawid@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.11"
 django = "~4.2"
 black = "^23.12.0"
 psycopg2 = "^2.9.9"
+djangorestframework = "~3.14"
+drf-spectacular = "^0.27.0"
+isort = "^5.13.2"
+djangorestframework-camel-case = "^1.4.2"
+ipython = "^8.18.1"
+    
+[tool.black]
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+line-length = 88
+target = "src"
+
+[tool.isort]
+profile = "black"
 
 
 [build-system]

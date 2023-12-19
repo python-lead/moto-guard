@@ -1,3 +1,10 @@
+#Environment:
+APP_ENVIRONMENT=development
+
+#Django:
+DJANGO_SECRET_KEY=(y#o&s8=1pd73tj1n9pu$)5b$b!j^lemtqtdh&_5vpvh9g)d9n
+
+# Database:
 POSTGRES_DB=postgres
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=pass
