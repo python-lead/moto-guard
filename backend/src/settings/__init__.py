@@ -2,7 +2,7 @@ from os import environ
 
 from split_settings.tools import include, optional
 
-ENVIRONMENT = environ.get("APP_ENVIRONMENT", "development")
+ENVIRONMENT = environ.get("APP_ENVIRONMENT")
 
 assert ENVIRONMENT in ("development", "staging", "production")
 
