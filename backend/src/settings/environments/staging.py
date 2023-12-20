@@ -1,1 +1,1 @@
-raise NotImplementedError("Production settings not implemented!")
+raise NotImplementedError("Staging settings not implemented!")
