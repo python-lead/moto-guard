@@ -12,7 +12,7 @@ base_settings = [
     # Environment setting override:
     "environments/{0}.py".format(ENVIRONMENT),
     # Optional setting override:
-    optional("environments/local.py"),
+    optional("environments/local_override.py"),
 ]
 
 include(*base_settings)
