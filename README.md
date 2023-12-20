@@ -40,6 +40,7 @@ that I've learned from working on different Django projects
 * docker-compose: ^2.18.1
 #### Optional:
 * make
+* pre-commit: ~3.6
 
 ## Setup
 To run this project locally cd into the project and:
