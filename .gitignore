@@ -1,3 +1,8 @@
+# Backend files:
+backend/src/static/
+backend/src/media/
+backend/src/settings/environments/local_override.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
