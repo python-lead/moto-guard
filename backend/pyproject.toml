@@ -16,6 +16,7 @@ isort = "^5.13.2"
 djangorestframework-camel-case = "^1.4.2"
 ipython = "^8.18.1"
 django-split-settings = "^1.2.0"
+sentry-sdk = "^1.39.1"
     
 [tool.black]
 include = '\.pyi?$'
@@ -37,7 +38,6 @@ target = "src"
 
 [tool.isort]
 profile = "black"
-
 
 [build-system]
 requires = ["poetry-core"]
