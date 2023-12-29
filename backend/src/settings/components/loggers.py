@@ -1,10 +1,11 @@
+import logging
 import os
 
 import sentry_sdk
 from sentry_sdk.integrations.django import DjangoIntegration
 from sentry_sdk.integrations.logging import LoggingIntegration
 from src.settings import ENVIRONMENT
-from src.settings.components.base import APP, DEBUG
+from src.settings.components.base import DEBUG
 
 LOGGING = {
     "version": 1,

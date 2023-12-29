@@ -9,6 +9,7 @@ assert ENVIRONMENT in ("development", "staging", "production")
 base_settings = [
     "components/base.py",
     "components/database.py",
+    "components/loggers.py",
     # Environment setting override:
     "environments/{0}.py".format(ENVIRONMENT),
     # Optional setting override:
