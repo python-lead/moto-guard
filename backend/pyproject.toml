@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "backend"
+version = "0.1.0"
+description = ""
+authors = ["Dawid <rygula.dawid@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "~4.2"
+black = "^23.12.0"
+psycopg2 = "^2.9.9"
+djangorestframework = "~3.14"
+drf-spectacular = "^0.27.0"
+isort = "^5.13.2"
+djangorestframework-camel-case = "^1.4.2"
+ipython = "^8.18.1"
+django-split-settings = "^1.2.0"
+sentry-sdk = "^1.39.1"
+    
+[tool.black]
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+line-length = 88
+target = "src"
+
+[tool.isort]
+profile = "black"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
