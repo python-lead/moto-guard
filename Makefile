@@ -8,3 +8,6 @@ dev:
 
 exec-backend:
 	docker exec -it mg-backend bash
+
+clean:
+	isort --profile black backend/src/ && black backend/src/
