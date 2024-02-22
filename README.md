@@ -35,9 +35,14 @@ that I've learned from working on different Django projects
 * Django: ~4.2
 * Django REST framework: ~3.14
 
+#### Databases used:
+* postgresql: 16
+* mongodb: 7.0.5
+
 ## Requirements:
 * Docker: ^24.0.2
 * docker-compose: ^2.18.1
+
 #### Optional:
 * make
 * pre-commit: ~3.6
@@ -54,6 +59,19 @@ $ make dev
 
 $ make exec-backend
 # enters backend container shell via bash
+```
+
+## Mongodb
+### MongoExpress service:
+[Mongo Express service](http://localhost:8001/mongo-express/)
+
+#### Authentication credentials:
+`admin: pass`
+
+### Access shell locally:
+```
+docker exec -it mg-mongo mongosh
+# Enters mongodb service shell via mongosh
 ```
 
 ## Other:
