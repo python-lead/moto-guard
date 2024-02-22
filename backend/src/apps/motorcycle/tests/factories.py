@@ -1,4 +1,5 @@
 import factory
+
 from src.apps.motorcycle.models import Motorcycle, MotorcycleBrand
 
 
