@@ -61,6 +61,5 @@ $ make exec-backend
 ### Pre-commit hooks:
 #### backend hooks:
 - Formats /backend/src using black
-- Executes mypyc-compiled black format check
 
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
