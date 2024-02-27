@@ -8,7 +8,7 @@ from src.apps.motorcycle.tests.factories import (
 )
 
 
-class MotorcycleAPITestCase(APITestCase):
+class MotorcycleViewSetTestCase(APITestCase):
     def _setup_fixtures(self):
         self.brand = MotorcycleBrandFactory()
         self.motorcycle = MotorcycleFactory(brand=self.brand)

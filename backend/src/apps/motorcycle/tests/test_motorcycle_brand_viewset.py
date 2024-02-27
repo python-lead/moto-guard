@@ -5,7 +5,7 @@ from rest_framework.test import APITestCase
 from src.apps.motorcycle.tests.factories import MotorcycleBrandFactory
 
 
-class MotorcycleBrandAPITestCase(APITestCase):
+class MotorcycleBrandViewSetTestCase(APITestCase):
     @classmethod
     def setUpTestData(cls):
         cls.url_list = reverse("motorcycle:brands-list")
