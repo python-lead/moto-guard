@@ -1,9 +1,9 @@
-from rest_framework.serializers import ModelSerializer
+from rest_framework import serializers
 
 from src.apps.motorcycle.models import Motorcycle, MotorcycleBrand
 
 
-class MotorcycleBrandSerializer(ModelSerializer):
+class MotorcycleBrandSerializer(serializers.ModelSerializer):
     class Meta:
         model = MotorcycleBrand
         fields = (
@@ -14,7 +14,7 @@ class MotorcycleBrandSerializer(ModelSerializer):
         )
 
 
-class MotorcycleSerializer(ModelSerializer):
+class MotorcycleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Motorcycle
         fields = (
@@ -27,3 +27,10 @@ class MotorcycleSerializer(ModelSerializer):
             "type",
             "year",
         )
+
+
+class MotorcycleDetailsSerializer(serializers.Serializer):
+    id = serializers.CharField(read_only=True)
+    motorcycle_id = serializers.IntegerField()
+    model = serializers.CharField()
+    year = serializers.IntegerField(min_value=1)
