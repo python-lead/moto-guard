@@ -1,4 +1,4 @@
-version: '3.2'
+version: '3.5'
 
 services:
   backend:
@@ -17,6 +17,7 @@ services:
     stdin_open: true
     depends_on:
       - db
+      - mongo
     tty: true
     volumes:
       - ./backend:/backend:cached
@@ -32,12 +33,34 @@ services:
     volumes:
       - db_volume:/var/lib/postgresql/data
 
+  mongo:
+    container_name: mg-mongo
+    image: mongo:7.0.5-jammy
+    restart: always
+    volumes:
+      - db_volume:/var/lib/mongodb/data
+    env_file:
+      - .dev_env
+
+
+  mongo-express:
+      container_name: mg-mongo-express
+      image: mongo-express:1.0.2-20-alpine3.19
+      restart: always
+      ports:
+        - 8081:8081
+      env_file:
+        - .dev_env
+      depends_on:
+        - mongo
+
   nginx:
     container_name: mg-nginx
     build: ./nginx/local
     image: moto_guard_nginx
     depends_on:
       - backend
+      - mongo-express
     environment:
       - PROD=0
     ports:

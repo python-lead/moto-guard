@@ -25,6 +25,10 @@ LOGGING = {
             "handlers": ["console"],
             "level": "INFO",
         },
+        "factory": {
+            "handlers": ["console"],
+            "level": "INFO",
+        },
     },
 }
 
