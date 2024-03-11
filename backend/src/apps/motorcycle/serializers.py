@@ -29,7 +29,7 @@ class MotorcycleSerializer(serializers.ModelSerializer):
         )
 
 
-class MotorcycleDetailsSerializer(serializers.Serializer):
+class MongoMotorcycleDetailsSerializer(serializers.Serializer):
     id = serializers.CharField(read_only=True)
     motorcycle_id = serializers.IntegerField()
     model = serializers.CharField()

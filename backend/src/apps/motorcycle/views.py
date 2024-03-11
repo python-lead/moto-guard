@@ -4,8 +4,8 @@ from rest_framework.response import Response
 from src.apps.motorcycle.models import Motorcycle, MotorcycleBrand
 from src.apps.motorcycle.mongo_models import MotorcycleDetails
 from src.apps.motorcycle.serializers import (
+    MongoMotorcycleDetailsSerializer,
     MotorcycleBrandSerializer,
-    MotorcycleDetailsSerializer,
     MotorcycleSerializer,
 )
 from src.mongodb.utils import MongoViewSetMixin
@@ -30,7 +30,7 @@ class MotorcycleDetailMongoViewSet(
     mixins.UpdateModelMixin,
 ):
     model = MotorcycleDetails
-    serializer_class = MotorcycleDetailsSerializer
+    serializer_class = MongoMotorcycleDetailsSerializer
 
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
