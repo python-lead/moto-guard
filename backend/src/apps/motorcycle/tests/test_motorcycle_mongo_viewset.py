@@ -27,9 +27,16 @@ class MotorcycleDetailMongoViewSetTestCase(MongoTestTearDown, APITestCase):
             "year": 2018,
         }
 
-        self.list_url = reverse("motorcycle:mongo_moto-list")
+        self.list_url = reverse(
+            "motorcycle:mongo_moto-list", args=(self.brand.pk, self.motorcycle.pk)
+        )
         self.details_url = reverse(
-            "motorcycle:mongo_moto-detail", args=(self.details.id,)
+            "motorcycle:mongo_moto-detail",
+            args=(
+                self.brand.pk,
+                self.motorcycle.pk,
+                self.details.id,
+            ),
         )
 
     def test_list_details(self):

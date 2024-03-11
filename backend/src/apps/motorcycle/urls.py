@@ -10,12 +10,16 @@ from src.apps.motorcycle.views import (
 app_name = "motorcycle"
 
 router = DefaultRouter()
-router.register("brands", MotorcycleBrandViewSet, basename="brands")
-# todo: nest under motorcycle resource
-router.register("mongo-moto", MotorcycleDetailMongoViewSet, basename="mongo_moto")
+router.register(r"brands", MotorcycleBrandViewSet, basename="brands")
 
-brand_router = routers.NestedDefaultRouter(router, "brands", lookup="brand")
+motorcycle_router = routers.NestedSimpleRouter(router, r"brands", lookup="motorcycle")
+motorcycle_router.register(r"motorcycles", MotorcycleViewSet, basename="models")
 
-brand_router.register("motorcycles", MotorcycleViewSet, basename="models")
+motorcycle_detail_router = routers.NestedSimpleRouter(
+    motorcycle_router, r"motorcycles", lookup="motorcycle_mongo_details"
+)
+motorcycle_detail_router.register(
+    r"details", MotorcycleDetailMongoViewSet, basename="mongo_moto"
+)
 
-urlpatterns = router.urls + brand_router.urls
+urlpatterns = router.urls + motorcycle_router.urls + motorcycle_detail_router.urls
